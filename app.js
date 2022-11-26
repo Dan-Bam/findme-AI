@@ -1,14 +1,11 @@
 
 const express = require('express');
 const sharp = require('sharp')
-const multer = require('multer')
 const crypto = require('crypto')
 require('dotenv').config()
 const port = 3000
-const url_to_image = require("url-to-image")
 const application = express()
 const mysql = require('mysql2')
-const client = require('https');
 const fetch = require('node-fetch')
 application.use(express.json()); 
 application.use(express.urlencoded({ extended: false }));
@@ -31,8 +28,7 @@ const s3 = new aws.S3({
 
 
 
-const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML
-const { send } = require('process');
+const deepai = require('deepai'); // OR include deepai.min.js as a script tag in your HTML=
 
 deepai.setApiKey('74ee058f-bff7-408b-b31d-fac0b9a4fcce');
 
